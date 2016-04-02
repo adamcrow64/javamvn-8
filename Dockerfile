@@ -22,6 +22,9 @@ RUN echo "JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> /etc/environment
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
+# copy across useful jars
+COPY java/* /usr/share/java/
+RUN ln -s /usr/share/java/jaxp_transform_impl.jar -> /etc/alternatives/jaxp_transform_impl
 
 # Create a user and group used to launch processes
 # The user ID 1000 is the default for the first "regular" user on Fedora/RHEL,
