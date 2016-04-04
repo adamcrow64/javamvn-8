@@ -8,7 +8,7 @@ RUN set -x \
     && apt-get update --quiet \
     && apt-get install --quiet --yes --no-install-recommends python-software-properties software-properties-common \
     && apt-get install --quiet --yes --no-install-recommends xmlstarlet libsaxonb-java libaugeas-dev augeas-tools bsdtar unzip \
-    && apt-get install --quiet --yes --no-install-recommends curl wget maven \
+    && apt-get install --quiet --yes --no-install-recommends curl wget maven libsystemd-journal0 \
     && apt-get clean
 
 RUN add-apt-repository ppa:webupd8team/java -y
